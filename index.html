@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>figuras</title>
+</head>
+<body>
+    <main class="container">
+        <section class="title">
+            <h1>Calculadora de figuras geometricas</h1>
+        </section>
+
+        <section class="figures-box-container">
+
+            <div class="figure-box square">
+                <form action="" id="square-form">
+                    <div class="square-pic figure-pic"></div>
+                    <label for="lado" class="labelAreas">cuanto mide el lado</label>
+                    <input type="text" name="" id="lado">
+                    <input type="button" value="Calcular permietro" id="perimetroSubmit" onclick="calcularPerimetroCuadrado()">
+                    <input type="button" value="Calcular area" id="areaSubmit" onclick="calcularAreaCuadrado()">
+                </form>
+
+                <div class="resultado-container">
+                    <p id="squareResult">0</p>
+                </div>
+            </div>
+
+
+            <div class="figure-box triangle">
+                <form action="" id="triangle-form">
+                    <div class="triangle-pic figure-pic"></div>
+                    <label for="triangleBase" class="labelAreas">cuanto mide la base</label>
+                    <input type="text" name="" id="triangleBase">
+
+                    <label for="triangleHigh" class="labelAreas">cuanto mide la altura</label>
+                    <input type="text" name="" id="triangleHigh">
+
+                    <label for="triangleHip" class="labelAreas">cuanto mide la hip</label>
+                    <input type="text" name="" id="triangleHip">
+
+                    <input type="button" value="Calcular permietro" id="perimetroSubmit" onclick="calcularPerimetroTriangulo()">
+                    <input type="button" value="Calcular area" id="areaSubmit" onclick="calcularAreaTriangulo()">
+                </form>
+                <div class="resultado-container">
+                    <p id="triangleResult">0</p>
+                </div>
+            </div>
+
+            <div class="figure-box circle">
+                <form action="" id="circle-form">
+                    <div class="circle-pic figure-pic"></div>
+                    <label for="circleRadius" class="labelAreas">cuanto mide el radio</label>
+                    <input type="text" name="" id="circleRadius">
+
+                    <input type="button" value="Calcular perimetrotro" id="perimetroSubmit" onclick="calcularPerimetroCirculo()">
+                    <input type="button" value="Calcular area" id="areaSubmit" onclick="calcularAreaCirculo()">
+                </form>
+                <div class="resultado-container">
+                    <p id="resultadoCirculo">0</p>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section class="descuentos">
+            <div class="descuentos-box">
+                <form action="">
+                    <label for="precio_input" class="label">Inserta el precio</label>
+                    <input type="text" class="precio_input_clase inputs" id="precio_input">
+                    <label for="descuento_input" class="label"> Inserta el descuento</label>
+                    <input type="text" class="descuento_input_clase inputs" id="descuento_input">
+                    <label for="cupon" class="label">Inserta cupon</label>
+                    <input type="text" id="cupon">
+                    <input type="button" class="inputButton" onclick="descuento()" value="Calcular descuento">
+                    <label for="ResultadoDesc" class="label labelDescuento">El precio con descuento es:</label>
+                    <input type="text" disabled class="resultado_input_clase inputs" id="resultadoDesc">
+
+                   
+                </form>
+            </div>
+        </section>
+
+        <section class="probabilidad">
+            <div class="cartaProbabilidad">
+                <form action="">
+                    <label for="listaArrayinput" class="listaArrayinputLabel">Añade un numero</label>
+                    <input type="text" id="listaArrayInput">
+                    <input type="button" value="Añadir numero" id="ListaArrayButton" onclick="arrayCalculator()">
+
+                    <input type="button" value="Calcular promedio" id="promedioButton" onclick="promedio()">
+                    <input type="button" value="Calcular mediana" id="medianaButton" onclick="mediana()">
+                    <input type="button" value="Calcular moda" id="modaButton" onclick="moda()">
+                    <label for="ResultadoProbabilidad" class="resultadoProbabilidadLabel">El resultado es:</label>
+                    <input type="text" disabled id="resultadoProbabilidad">
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="./figuras.js"></script>
+</body>
+</html>
